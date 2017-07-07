@@ -16,11 +16,11 @@ class Word
     @word
   end
 
-  define_method(:definationz)do
+  define_method(:definationz) do
     @definationz
   end
 
-  define_method(:add_defination) do |defination|
+  define_method(:add_def) do |defination|
     @definationz.push(defination)
   end
 

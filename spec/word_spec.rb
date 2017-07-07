@@ -61,11 +61,11 @@ describe('Word') do
     end
   end
 
-  describe('#add_defination') do
+  describe('#add_def') do
     it('adds a new defination to a word') do
       test_word = Word.new('Dude')
       test_defination = Defination.new('This is a preety sick man')
-      test_word.add_defination(test_defination)
+      test_word.add_def(test_defination)
       expect(test_word.definationz).to(eq([test_defination]))
     end
   end

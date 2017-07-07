@@ -1,8 +1,8 @@
 <h3>Here are all the definations for this word:</h3>
 
   <ul>
-    <% @word.definationz().each() do |defination| %>
-      <li><a href="/words/<%= definationz.id() %>"><%= definationz.defination() %></a></li>
+    <% @word.definationz().each() do |definationz| %>
+      <li><%= definationz %></li>
     <% end %>
   </ul>
 

@@ -2,6 +2,9 @@ require('rspec')
 require('defination')
 
 describe('Defination') do
+  before do
+    Defination.clear
+  end
   describe('#defination') do
     it('returns defination as is') do
       test_defination = Defination.new('a cool person')
