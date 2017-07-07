@@ -16,6 +16,10 @@ class Word
     @word
   end
 
+  define_method(:definationz)do
+    @definationz
+  end
+
   define_singleton_method(:all) do
     @@words
   end
