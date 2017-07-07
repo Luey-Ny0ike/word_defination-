@@ -1,8 +1,9 @@
 class Word
   @@words = []
-  attr_reader(:word)
+  attr_reader(:word, :id)
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
+    @id = @@words.length.+1
     # used the attribute reader to access the attributes passed as arguments for the
     # initialize method
   end
