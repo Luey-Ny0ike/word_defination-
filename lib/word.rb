@@ -3,6 +3,7 @@ class Word
   define_method(:initialize) do |word|
     @word = word
     @id = @@words.length.+1
+    @definationz = []
     # called the .length method to add a numer by one and assingn it to a word
     # the first word would be 1 the fifth 5 and so on
   end
