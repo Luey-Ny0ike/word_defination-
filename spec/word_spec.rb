@@ -1,6 +1,7 @@
 require('rspec')
 require('word')
 require('defination')
+# this is to require the defination class
 
 describe('Word') do
   before do
