@@ -14,4 +14,12 @@ describe('Defination') do
       expect(Defination.all).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('saves a word and pushes it to the empty array') do
+      test_defination = Defination.new(word: 'something cool')
+      test_defination.save
+      expect(Defination.all).to(eq([test_defination]))
+    end
+  end
 end
