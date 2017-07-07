@@ -20,6 +20,10 @@ class Word
     @definationz
   end
 
+  define_method(:add_defination) do |defination|
+    @definationz.push(defination)
+  end
+
   define_singleton_method(:all) do
     @@words
   end
