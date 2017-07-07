@@ -15,4 +15,8 @@ class Word
     @@words.push(self)
   end
   # self in this case is the input we will gather from the user
+
+  define_singleton_method(:clear) do
+    @@words = []
+  end
 end
