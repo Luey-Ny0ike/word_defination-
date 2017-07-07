@@ -1,13 +1,18 @@
 class Word
   @@words = []
-  attr_reader(:word, :id)
-  # used the attribute reader to access the attributes passed as arguments for the
-  # initialize method
-  define_method(:initialize) do |attributes|
-    @word = attributes.fetch(:word)
+  define_method(:initialize) do |word|
+    @word = word
     @id = @@words.length.+1
-    # called the .length method to add a numer by one and assign it to a word
+    # called the .length method to add a numer by one and assingn it to a word
     # the first word would be 1 the fifth 5 and so on
+  end
+
+  define_method(:id) do
+    @id
+  end
+
+  define_method(:word) do
+    @word
   end
 
   define_singleton_method(:all) do
