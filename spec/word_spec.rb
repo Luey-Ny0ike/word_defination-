@@ -9,9 +9,17 @@ describe('Word') do
     end
   end
 
-  describe('.all')do
-    it("returns an empty array at first")do
+  describe('.all') do
+    it('returns an empty array at first') do
       expect(Word.all).to(eq([]))
+    end
+  end
+
+  describe('#save') do
+    it('saves a word and pushes it to the empty array') do
+      test_word = Word.new(word: 'dude')
+      test_word.save
+      expect(Word.all).to(eq([test_word]))
     end
   end
 end
