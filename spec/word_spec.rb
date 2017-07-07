@@ -9,7 +9,7 @@ describe('Word') do
   end
   describe('#word') do
     it('returns the word as is') do
-      test_word = Word.new(word: 'Dude')
+      test_word = Word.new('Dude')
       expect(test_word.word).to(eq('Dude'))
     end
   end
