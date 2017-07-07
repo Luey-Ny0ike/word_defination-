@@ -25,4 +25,14 @@ class Defination
   define_singleton_method(:clear) do
     @@definations = []
   end
+
+  define_singleton_method(:find) do |id|
+    found_definations = nil
+    @@definations.each do |defination|
+      found_definations = defination if defination.id.eql?(id)
+      # found_definations is equal to  defination if the input defination id is equal to the id
+      # passed as an argument for the find method
+    end
+    found_definations
+  end
 end
