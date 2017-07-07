@@ -6,7 +6,7 @@ class Word
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
     @id = @@words.length.+1
-    # called the .length method to add a numer by one and assingn it to a word
+    # called the .length method to add a numer by one and assign it to a word
     # the first word would be 1 the fifth 5 and so on
   end
 
@@ -26,13 +26,10 @@ class Word
   define_singleton_method(:find) do |id|
     found_words = nil
     @@words.each do |word|
-      if word.id.eql?(id.to_i)
-        found_words = word
-      # found_words = word if word.id.eql?(id)
+      found_words = word if word.id.eql?(id)
       # found_words is equal to  word if the input word id is equal to the id
       # passed as an argument for the find method
     end
-      found_words
-    end
+    found_words
   end
 end

@@ -45,8 +45,10 @@ describe('Word') do
 
   describe('.find') do
     it('returns only one word based on its id') do
-      test_word = Word.new(word: 'dude').save
-      test_word2 = Word.new(word: 'bruh').save
+      test_word = Word.new(word: 'dude')
+      test_word.save
+      test_word2 = Word.new(word: 'bruh')
+      test_word2.save
       expect(Word.find(test_word.id)).to(eq(test_word))
     end
   end
