@@ -22,4 +22,12 @@ describe('Defination') do
       expect(Defination.all).to(eq([test_defination]))
     end
   end
+
+  describe('.clear') do
+    it('empties the array at first') do
+      Defination.new(defination: 'thats really dope').save
+      Defination.clear
+      expect(Defination.all).to(eq([]))
+    end
+  end
 end
