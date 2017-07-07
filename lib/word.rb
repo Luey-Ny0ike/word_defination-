@@ -7,11 +7,12 @@ class Word
     # initialize method
   end
 
-  define_singleton_method(:all)do
+  define_singleton_method(:all) do
     @@words
   end
 
-  define_method(:save)do
+  define_method(:save) do
     @@words.push(self)
   end
+  # self in this case is the input we will gather from the user
 end
