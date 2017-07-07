@@ -22,4 +22,12 @@ describe('Word') do
       expect(Word.all).to(eq([test_word]))
     end
   end
+
+  describe('.clear') do
+    it('empties the array at first') do
+      Word.new(word: 'msee').save
+      Word.clear
+      expect(Word.all).to(eq([]))
+    end
+  end
 end
