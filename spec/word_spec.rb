@@ -5,12 +5,18 @@ describe('Word') do
   before do
     Word.clear
     # it clears the array first in order for the .all spec to pass
-
   end
   describe('#word') do
     it('returns the word as is') do
       test_word = Word.new('Dude')
       expect(test_word.word).to(eq('Dude'))
+    end
+  end
+
+  describe('#definationz') do
+    it('initially returns an empty array of definations for a word') do
+      test_word = Word.new('Dude')
+      expect(test_word.definationz).to(eq([]))
     end
   end
 
