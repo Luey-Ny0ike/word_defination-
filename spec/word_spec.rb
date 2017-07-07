@@ -2,6 +2,11 @@ require('rspec')
 require('word')
 
 describe('Word') do
+  before do
+    Word.clear
+    # it clears the array first in order for the .all spec to pass
+
+  end
   describe('#word') do
     it('returns the word as is') do
       test_word = Word.new(word: 'Dude')
@@ -35,6 +40,14 @@ describe('Word') do
     it('returns a word by its id') do
       test_word = Word.new(word: 'bruh')
       expect(test_word.id).to(eq(1))
+    end
+  end
+
+  describe('.find') do
+    it('returns only one word based on its id') do
+      test_word = Word.new(word: 'dude').save
+      test_word2 = Word.new(word: 'bruh').save
+      expect(Word.find(test_word.id)).to(eq(test_word))
     end
   end
 end
