@@ -1,2 +1,10 @@
-<!-- <h1><%= @word %></h1>
-<a href="/" class="btn btn-success">Home</a> -->
+<h3>Here are all the definations for this word:</h3>
+
+  <ul>
+    <% @word.definationz().each() do |defination| %>
+      <li><a href="/words/<%= definationz.id() %>"><%= definationz.defination() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href="/words/<%= @word.id%>/definations/new">Add a new defination</a>
+  <a href="/">Return to Main Page</a>
