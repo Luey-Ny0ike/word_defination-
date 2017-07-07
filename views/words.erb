@@ -1,8 +1,11 @@
 <h1>Words</h1>
 
-  <h3>Here are the words in this dictionary: </h3>
-  <ul>
+<h3>Here are the words in this dictionary:
+</h3>
+<ul>
   <% @words.each() do |word| %>
-        <li><%= word.word() %></a></li>
+  <li>
+    <a href="/words/<%= word.id() %>"><%= word.word() %></a>
+  </li>
   <% end %>
-  </ul>
+</ul>
