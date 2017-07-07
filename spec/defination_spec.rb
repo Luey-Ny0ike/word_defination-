@@ -8,4 +8,10 @@ describe('Defination') do
       expect(test_defination.defination).to(eq('a cool person'))
     end
   end
+
+  describe('.all') do
+    it('returns an empty array at first') do
+      expect(Defination.all).to(eq([]))
+    end
+  end
 end
