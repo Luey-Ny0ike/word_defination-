@@ -30,4 +30,11 @@ describe('Word') do
       expect(Word.all).to(eq([]))
     end
   end
+
+  describe('#id') do
+    it('returns a word by its id') do
+      test_word = Word.new(word: 'bruh')
+      expect(test_word.id).to(eq(1))
+    end
+  end
 end
