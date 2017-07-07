@@ -30,4 +30,21 @@ describe('Defination') do
       expect(Defination.all).to(eq([]))
     end
   end
+
+  describe('#id') do
+    it('returns a defination by its id') do
+      test_defination = Defination.new(Defination: 'dope stuff bruh')
+      expect(test_defination.id).to(eq(1))
+    end
+  end
+
+  describe('.find') do
+    it('returns only a defination based on its id') do
+      test_defination = Defination.new(Defination: 'dude')
+      test_defination.save
+      test_defination2 = Defination.new(Defination: ' wow bruh')
+      test_defination2.save
+      expect(Defination.find(test_defination.id)).to(eq(test_defination))
+    end
+  end
 end
